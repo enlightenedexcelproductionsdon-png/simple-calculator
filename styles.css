@@ -1,0 +1,77 @@
+:root{
+  --bg:#f3f4f6;
+  --panel:#1f2937;
+  --display:#111827;
+  --btn:#e5e7eb;
+  --op:#f59e0b;
+  --accent:#3b82f6;
+  --text:#ffffff;
+  --shadow: 0 6px 18px rgba(15, 23, 42, 0.2);
+}
+
+*{box-sizing:border-box;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial}
+html,body{height:100%}
+body{
+  background:linear-gradient(135deg,#eef2ff 0%, #f3f4f6 100%);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+  margin:0;
+}
+
+.calc{
+  width:320px;
+  border-radius:12px;
+  padding:18px;
+  background:linear-gradient(180deg,var(--panel),#111827 120%);
+  box-shadow:var(--shadow);
+  color:var(--text);
+}
+
+.display{
+  height:68px;
+  background:linear-gradient(180deg,#0f1724, #0b1220);
+  border-radius:8px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+  padding:12px;
+  font-size:28px;
+  line-height:1;
+  color:var(--display);
+  background-color:#e6eefc;
+  color:#0b1220;
+  margin-bottom:12px;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+}
+
+.keys{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap:10px;
+}
+
+.btn{
+  background:var(--btn);
+  border:none;
+  border-radius:8px;
+  padding:16px;
+  font-size:18px;
+  cursor:pointer;
+  box-shadow: 0 3px 6px rgba(2,6,23,0.08);
+  transition:transform .06s ease, box-shadow .06s;
+}
+
+.btn:active{transform:translateY(2px); box-shadow:none}
+.operator{background:#fde68a}
+.equals{
+  grid-column: 4 / 5;
+  background:var(--accent);
+  color:white;
+  font-weight:600;
+}
+.zero{grid-column:1 / 3}
+.function{background:#f3f4f6}
